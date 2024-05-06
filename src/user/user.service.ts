@@ -21,14 +21,18 @@ export class UserService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} user`;
+    return this.userRepository.findOne({
+      where: {
+        id
+      }
+    });
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+    return this.userRepository.update({id},updateUserDto);
   }
 
   remove(id: number) {
-    return `This action removes a #${id} user`;
+  return this.userRepository.delete({id});
   }
 }
