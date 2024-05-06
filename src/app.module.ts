@@ -17,8 +17,9 @@ import { UserModule } from './user/user.module';
       entities: [User],
       synchronize: true,
     }),
-    
+    UserModule,
   ],
+ controllers: [AppController],
+ providers: [AppService],
 })
-
 export class AppModule {}
