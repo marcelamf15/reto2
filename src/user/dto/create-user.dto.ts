@@ -9,8 +9,8 @@ export class CreateUserDto {
   @MinLength(10,{
     message:'minimo 10 caracteres'
   })
-  @MaxLength(10,{
-    message: 'Maximo de 10 caracteres'
+  @MaxLength(9,{
+    message: 'Maximo de 9 caracteres'
   })
   firstName: string;
   @IsNotEmpty()
